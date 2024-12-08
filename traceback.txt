@@ -1,0 +1,30 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 165, in script call
+    call find_tank_game from _call_find_tank_game
+  File "game/script.rpy", line 248, in script
+    $ renpy.music.pause(channel="music")
+  File "game/script.rpy", line 248, in <module>
+    $ renpy.music.pause(channel="music")
+AttributeError: module 'renpy.audio.music' has no attribute 'pause'
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 165, in script call
+    call find_tank_game from _call_find_tank_game
+  File "game/script.rpy", line 248, in script
+    $ renpy.music.pause(channel="music")
+  File "/home/maes0624/kbtu/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/home/maes0624/kbtu/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 248, in <module>
+    $ renpy.music.pause(channel="music")
+AttributeError: module 'renpy.audio.music' has no attribute 'pause'
+
+Linux-5.15.153.1-microsoft-standard-WSL2-x86_64-with-glibc2.35 x86_64
+Ren'Py 8.3.3.24111502
+voinushka 1.0
+Sun Dec  8 23:39:07 2024
